@@ -1,5 +1,5 @@
-# archive_checksum_script
-Cross-Platform DVD/BD/ISO/Folder Data Archive Integrity Verification Scripts
+# Cross-Platform DVD/BD/ISO/Folder Data Archive Integrity Verification Scripts
+---
 
 ## Overview
 
@@ -210,10 +210,5 @@ Suppose you want to archive your folder `VacationPhotos`:
 ## License
 
 This project is provided as-is for archival and educational purposes.
-
----
-
-**Enjoy robust, future-proof archiving!**  
-For questions or contributions, please open an issue or pull request.
 
 ---
