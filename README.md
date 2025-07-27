@@ -110,6 +110,7 @@ Additional logging can be enabled for Windows version of this script using the `
 ```bash
 ./verify_md5sum.sh
 ```
+Note: Running the verification on linux may require `sudo`version of the command depending if and how file permissions were saved to the disc. 
 
 **Windows:**
 ```powershell
