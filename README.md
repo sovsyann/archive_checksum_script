@@ -80,7 +80,7 @@ or
 - Produces `checklist.md5sum` in the current directory.
 - Output is UTF-8 BOM with LF endings for cross-platform compatibility.
 
-Additional logging can be enabled for Windows version of this script using the ´-LogSkipped´ option. This creates a text file listing the issues when generation the checklist. 
+Additional logging can be enabled for Windows version of this script using the `-LogSkipped` option. This creates a text file listing the issues when generation the checklist. 
 ```powershell
 .\generate_md5_checklist.ps1 -LogSkipped"
 ```
