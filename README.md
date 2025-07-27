@@ -1,5 +1,4 @@
 # Cross-Platform DVD/BD/ISO/Folder Data Archive Integrity Verification Scripts
----
 
 ## Overview
 
