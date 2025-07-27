@@ -1,3 +1,5 @@
+# In PowerShell issue this command to allow running this script: 
+# Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 <#
 .SYNOPSIS
     Generate MD5 checksums for all files in a directory, outputting a checklist file.
