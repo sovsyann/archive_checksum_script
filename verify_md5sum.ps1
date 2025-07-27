@@ -1,3 +1,5 @@
+# In PowerShell issue this command to allow running this script: 
+# Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 <#
 .SYNOPSIS
     Verify file integrity using an MD5 checklist.
