@@ -42,7 +42,7 @@ This matches how the scripts expect relative paths.
 
 **Why?**  
 - The scripts expect the archive folder’s name as the first element in each checklist path.
-- Keeping checklist and scripts at the disc root ensures simple, reliable verification from the disc itself. You can, however, check the disc from the script places elsewere, read below.
+- Keeping checklist and scripts at the disc root ensures simple, reliable verification from the disc itself. You can, however, check the disc from the script placed elsewere, read further.
 
 ---
 
@@ -97,7 +97,7 @@ Additional logging can be enabled for Windows version of this script using the `
 2. **On macOS:**  
    - When using Finder (to burn) or Disk Utility (to make image), hidden system and MacOS specific files are automatically excluded.
    - For hybrid discs, use Disk Utility’s **Hybrid Image Format (HFS+/ISO/UDF)** option.
-   - On Mac to convert from .dmg to .iso you can use this command: `hdiutil convert myimage.dmg -format UDTO -o myimage.iso`, after that you may have to rename created myimage.iso.cdr file to myimage.iso
+   - On Mac to convert from .dmg to .iso you can use this command: `hdiutil convert myimage.dmg -format UDTO -o myimage.iso`, after that you may have to rename created `myimage.iso.cdr` file to `myimage.iso`
 
 ---
 
@@ -240,5 +240,9 @@ Total files listed :     1352
 ## License
 
 This project is provided as-is for archival and educational purposes.
+
+## Happy Archiving!
+
+Please share your feedback by opening a Pull request.
 
 ---
