@@ -177,8 +177,38 @@ Suppose you want to archive your folder `VacationPhotos`:
     - **macOS/Linux:** `./verify_md5sum.sh`
     - **Windows:** `.\verify_md5sum.ps1`
 
-4. **To verify from a copy or non-default location:**
+4 (Optional). **To verify from a copy or non-default location:**
     - Adjust the script parameters to match the location of your checklist and archive folder.
+
+  **Verification output example:**
+
+Script produces immediate output and live progress indicator so you can see what is happening and if any problem is found, right away. This may be helpful when disc reading errors are occuring. When the check is completed the script generates a Summary and a Detailed report:
+  
+```bash
+./verify_md5sum.sh 
+🔍 Verifying files using MD5...
+📄 Checklist file : checklist.md5sum
+📁 Root folder    : .
+INFO: Watch the progress. Errors are printed immediately and summarized in the report.
+
+ERROR Hash mismatch for: ./testfolder/venv/bin/activate                  
+ERROR File missing: ./testfolder/venv/lib/python3.13/site-packages/_cffi_backend.cpython-313-darwin.so 
+[ 1352 / 1352 ]...older/venv/lib/python3.13/site-packages/OpenSSL/SSL.py 
+
+✅ Report SUMMARY for MD5 Check:
+Total files listed :     1352
+✅ Passed           : 1350
+❌ Missing files    : 1
+❌ Hash mismatches  : 1
+
+📊 DETAILED report:
+📂 Missing files:
+ - testfolder/venv/lib/python3.13/site-packages/_cffi_backend.cpython-313-darwin.so
+
+⚠️  Hash mismatched files:
+ - testfolder/venv/bin/activate
+```
+
 
 ---
 
