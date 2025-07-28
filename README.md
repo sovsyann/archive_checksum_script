@@ -220,7 +220,7 @@ Total files listed :     1352
 - Test your workflow with an ISO or rewritable disc before burning archival discs.
 - For best long-term compatibility, avoid overly long or complex path names.
 - On Windows, run `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass` if needed to allow PowerShell script execution.
-- During verification directly from CD every file is read separately, that slows down reading. A way to speed it up is to read the Disc as is with `dd if=/dev/sr0 of=/tmp/image.iso bs=2048 count=$blocks status=progress` saving the content temporarily on SSD, then mount the `image.iso` file and run verification from there, which may result to be a way faster.
+- During verification directly from CD every file is read separately, that slows down reading. A way to speed it up is to read the Disc as is with `dd if=/dev/sr0 of=/tmp/image.iso bs=2048 status=progress` saving the content temporarily on SSD, then mount the `image.iso` file and run verification from there, which may result to be a way faster.
 
 ---
 
