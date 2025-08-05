@@ -70,21 +70,31 @@ foreach ($line in $Lines) {
     }
 
     try {
-        $actualHash = (Get-FileHash -LiteralPath $fullPath -Algorithm MD5).Hash.ToLower()
-        if ($actualHash -ne $expectedHash) {
-            Write-Host "  --> HASH MISMATCH"
+        $fileHashObj = Get-FileHash -LiteralPath $fullPath -Algorithm MD5 -ErrorAction SilentlyContinue
+        if ($null -eq $fileHashObj -or $fileHashObj.Hash -eq $null) {
+            Write-Host "  --> Hash could not be calculated (file unreadable)"
             $BadHashFiles += $relPath
             $Failures++
             $BadHash++
         } else {
+
+            $actualHash = $fileHashObj.Hash.ToLower()
+            if ($actualHash -ne $expectedHash) {
+                Write-Host "  --> HASH MISMATCH"
+                $BadHashFiles += $relPath
+                $Failures++
+                $BadHash++
+        } else {
             Write-Host "  OK"
         }
+    }
     } catch {
-        Write-Host "  --> ERROR: $($_.Exception.Message)"
+        Write-Host "  --> ERROR (I/O or Read Error): $($_.Exception.Message)"
         $Failures++
         $BadHash++
         $BadHashFiles += $relPath
     }
+
 }
 
 # Summary
