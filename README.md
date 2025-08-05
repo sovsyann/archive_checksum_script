@@ -96,7 +96,7 @@ Additional logging can be enabled for Windows version of this script using the `
 
 2. **On macOS:**  
    - When using Finder (to burn) or Disk Utility (to make image), hidden system and MacOS specific files are automatically excluded.
-   - For hybrid discs, use Disk Utility’s **Hybrid Image Format (HFS+/ISO/UDF)** option.
+   - For hybrid .iso creation, use Disk Utility’s to create **Hybrid Image Format (HFS+/ISO/UDF)** option.
    - On Mac to convert from .dmg to .iso you can use this command: `hdiutil convert myimage.dmg -format UDTO -o myimage.iso`, after that you may have to rename created `myimage.iso.cdr` file to `myimage.iso`
 
 ---
@@ -217,6 +217,7 @@ Total files listed :     1352
 
 - Always place `checklist.md5sum` and verification scripts at the disc root.
 - Keep your archive folder’s name unchanged after checklist generation.
+- If burning the disc on Mac, Finder (in my case) burns on max speed regardless of selected speed. If lower speed is desired burning with "Burn" as hybrid HFS+ + Joilet + UDF work fine. 
 - Test your workflow with an ISO or rewritable disc before burning archival discs.
 - For best long-term compatibility, avoid overly long or complex path names.
 - On Windows, run `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass` if needed to allow PowerShell script execution.
