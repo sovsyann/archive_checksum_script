@@ -222,6 +222,7 @@ Total files listed :     1352
 - For best long-term compatibility, avoid overly long or complex path names.
 - On Windows, run `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass` if needed to allow PowerShell script execution.
 - During verification directly from DVD every file is read separately, that slows down reading. A way to speed it up is to read the Disc as is with `dd if=/dev/sr0 of=/tmp/image.iso bs=2048 status=progress` saving the content temporarily on SSD, then mount the `image.iso` file and run verification from there, which may result to be a way faster.
+- Another verification hint is to read the disc into an .iso with: `ddrescue -d -r3 /dev/sr0 myimage.iso rescue.log` which treats errors better and thus works faster
 
 ---
 
